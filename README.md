@@ -26,5 +26,5 @@ This project focuses on automated testing for modules like:
 
 ## 🛠️ Setup Instructions
 
-1. **Clone the repository
+1. Clone the repository
 2. git clone https://github.com/Loujayn234/Testing-Final
