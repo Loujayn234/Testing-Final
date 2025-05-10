@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,44 +10,39 @@ import org.openqa.selenium.By;
 
 public class loginPage {
 
-    @FindBy(name = "username")
-    WebElement usernameInput;
+    private WebDriver driver;
+    private WebDriverWait wait;
 
-
-    @FindBy(name = "password")
-    WebElement passwordInput;
-
-    @FindBy(css = "button[type='submit']")
-    WebElement loginButton;
-
-    // Locating the error message using the class name you provided
-    WebElement errorMessage;
+    // --- Locators ---
+    private By usernameInput = By.name("username");
+    private By passwordInput = By.name("password");
+    private By loginButton = By.cssSelector("button[type='submit']");
+    private By errorMessage = By.className("orangehrm-login-error");
 
     public loginPage(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
+
         // Optional: wait for page to load before interacting
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(usernameInput));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(usernameInput));
     }
 
     public void login(String username, String password) {
-        usernameInput.sendKeys(username);
-        passwordInput.sendKeys(password);
-        loginButton.click();
+        driver.findElement(usernameInput).sendKeys(username);
+        driver.findElement(passwordInput).sendKeys(password);
+        driver.findElement(loginButton).click();
     }
 
-    // Method to retrieve error message text using the updated class name
+    // Method to retrieve error message text
     public String getErrorMessage(WebDriver driver) {
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
+        WebDriverWait shortWait = new WebDriverWait(this.driver, Duration.ofSeconds(4));
         try {
-            WebElement errorMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-login-error")));
-            return errorMessage.getText();
+            WebElement errorMsgElement = shortWait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage));
+            return errorMsgElement.getText();
         } catch (Exception e) {
-
             System.out.println("Error message not found.");
             return null;
         }
     }
-
 }
