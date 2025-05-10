@@ -6,28 +6,22 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pages.PIMPage;
 import pages.WebDriverFactory;
 import pages.adminPage;
 import pages.loginPage;
 
-public class checkTheReset {
-    private WebDriver driver;
-    private loginPage loginPage;
-    private adminPage adminPage;
+public class checkTheReset extends BaseTest {
+
+     loginPage loginPage;
+     adminPage adminPage;
 
     @BeforeMethod
     public void setUp() {
-        driver = WebDriverFactory.createDriver("chrome");
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-        driver.manage().window().maximize();
-
+        super.setUp();
+        // Initialize page objects
         loginPage = new loginPage(driver);
         adminPage = new adminPage(driver);
-
-
-        // Navigate to application and login
-
-
     }
 
     @Test
@@ -39,10 +33,5 @@ public class checkTheReset {
         Assert.assertTrue(adminPage.areFieldsCleared(), "Fields were not cleared after reset");
     }
 
-    @AfterMethod
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
+
 }

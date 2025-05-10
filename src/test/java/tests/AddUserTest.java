@@ -14,6 +14,7 @@ public class AddUserTest extends BaseTest {  // Extend BaseTest here
 
     @BeforeMethod
     public void setup() {
+        super.setUp();
         loginPage = new loginPage(driver);
         adminPage = new adminPage(driver);
     }
@@ -21,7 +22,7 @@ public class AddUserTest extends BaseTest {  // Extend BaseTest here
     @Test
     public void testAddAdminUser() {
         loginPage.login("Admin", "admin123");
-        adminPage.addNewUser("lojy1234", "Janiya River Christiansen", "loay1234", "loay1234");
+        adminPage.addNewUser("lojy1234", "yedghjb1 ru84 90jsnd", "loay1234", "loay1234");
     }
 
     // No need for tearDown, since it's inherited from BaseTest
