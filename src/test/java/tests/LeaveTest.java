@@ -1,58 +1,56 @@
-package Test;
-
-import org.openqa.selenium.WebDriver;
+package tests;
 import org.testng.Assert;
-import org.testng.annotations.*;
-import Pages.LeavePage;
-import Pages.LoginPage;
-import Pages.Webclass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import pages.LeavePage;
+import pages.loginPage;
 
-
-public class LeaveTest {
-    WebDriver driver;
+public class LeaveTest extends BaseTest {
+    private loginPage loginPage;
+    private LeavePage LeavePage;
 
     @BeforeMethod
-    public void setup() {
-        driver = Webclass.createDriver("chrome");
-        driver.get("https://opensource-demo.orangehrmlive.com");
-        driver.manage().window().maximize();
-        new LoginPage(driver).login("Admin", "admin123");
+    public void setUp() {
+        super.setUp();
+
+        // Initialize page objects
+        loginPage = new loginPage(driver);
+        LeavePage = new LeavePage(driver);
     }
-// TEST CASE 1:Check enter valid data
     @Test
     public void testAddLeaveEntitlement() {
-        LeavePage leavePage = new LeavePage(driver);
-        leavePage.navigateToLeavePage();
+        loginPage.login("Admin", "admin123");
+        LeavePage.navigateToLeavePage();
 
         String employeeName = "shrouk";
         String leaveType = "US - Vacation";
         String entitlement = "20";
 
-        leavePage.addLeaveEntitlement(employeeName, leaveType, entitlement);
+        LeavePage.addLeaveEntitlement(employeeName, leaveType, entitlement);
 
-        Assert.assertTrue(leavePage.isEntitlementSuccessMessageDisplayed());
+        Assert.assertTrue(LeavePage.isEntitlementSuccessMessageDisplayed());
 
     }
     // TEST CASE 2: Verify invalid entitlement
     @Test
     public void testAddInvalidLeaveEntitlement() {
-        LeavePage leavePage = new LeavePage(driver);
-        leavePage.navigateToLeavePage();
+        loginPage.login("Admin", "admin123");
+        LeavePage.navigateToLeavePage();
 
         String employeeName = "shrouk";
         String leaveType = "US - Vacation";
         String invalidEntitlement = "-5"; // Negative value (invalid)
 
-        leavePage.addLeaveEntitlement(employeeName, leaveType, invalidEntitlement);
-        Assert.assertFalse(leavePage.isEntitlementSuccessMessageDisplayed(),
+        LeavePage.addLeaveEntitlement(employeeName, leaveType, invalidEntitlement);
+        Assert.assertFalse(LeavePage.isEntitlementSuccessMessageDisplayed(),
                 "Should be a number with upto 2 decimal places");
 
     }
     // TEST CASE 3:Cancel leave entitlement process
     @Test
     public void testCancelLeaveEntitlement() {
-        LeavePage leavePage = new LeavePage(driver);
-        leavePage.navigateToLeavePage();
+        loginPage.login("Admin", "admin123");
+        LeavePage.navigateToLeavePage();
 
         // Fill form but cancel instead of submitting
         String employeeName = "shrouk";
@@ -60,8 +58,8 @@ public class LeaveTest {
         String entitlement = "20";
 
         // Add method in LeavePage to handle cancellation
-        leavePage.fillLeaveEntitlementForm(employeeName, leaveType, entitlement);
-        leavePage.clickCancelButton();
+        LeavePage.fillLeaveEntitlementForm(employeeName, leaveType, entitlement);
+        LeavePage.clickCancelButton();
 
         // Verify we're back to the entitlements list
         Assert.assertTrue(driver.getCurrentUrl().contains("viewLeaveEntitlements"),
@@ -70,24 +68,18 @@ public class LeaveTest {
     // TEST CASE 4:Validate required fields
     @Test
     public void testRequiredFieldValidation() {
-        LeavePage leavePage = new LeavePage(driver);
-        leavePage.navigateToLeavePage();
+        loginPage.login("Admin", "admin123");
+        LeavePage.navigateToLeavePage();
+        LeavePage.clickSaveButton();
 
-        leavePage.clickSaveButton();
-
-        Assert.assertTrue(leavePage.isEmployeeNameErrorDisplayed(),
+        Assert.assertTrue(LeavePage.isEmployeeNameErrorDisplayed(),
                 "Employee name required error should appear");
-        Assert.assertTrue(leavePage.isLeaveTypeErrorDisplayed(),
+        Assert.assertTrue(LeavePage.isLeaveTypeErrorDisplayed(),
                 "Leave type required error should appear");
-        Assert.assertTrue(leavePage.isEntitlementErrorDisplayed(),
+        Assert.assertTrue(LeavePage.isEntitlementErrorDisplayed(),
                 "Entitlement required error should appear");
     }
 
 
-    @AfterMethod
-    public void tearDown() {
-        if (driver != null) {
-
-        }
     }
-}
+

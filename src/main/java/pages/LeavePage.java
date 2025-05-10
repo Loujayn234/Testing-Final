@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -12,7 +12,7 @@ public class LeavePage {
     private final WebDriverWait wait;
     private final Actions actions;
 
-    // Locators (unchanged)
+    // Locators
     private final By leaveMenu = By.xpath("//a[.//span[text()='Leave']]");
     private final By entitlementsMenu = By.xpath("//span[contains(text(),'Entitle')]");
     private final By addEntitlementsOption = By.xpath("//a[text()='Add Entitlements']");
@@ -24,9 +24,12 @@ public class LeavePage {
     private final By confirmButton = By.xpath("//button[normalize-space()='Confirm']");
     private final By successToast = By.cssSelector(".oxd-toast-container");
     private final By cancelButton = By.cssSelector("button.oxd-button.oxd-button--ghost");
-    private final By employeeNameError = By.cssSelector("div.oxd-input-group:has(label:contains('Employee Name')) + span.oxd-input-field-error-message");
-    private final By leaveTypeError = By.cssSelector(".error-message.leaveType");
-    private final By entitlementError = By.cssSelector(".error-message.entitlement");
+
+    // ✅ Fixed XPath locators for errors
+    private final By employeeNameError = By.xpath("//label[contains(text(),'Employee Name')]/following::span[contains(@class,'oxd-input-field-error-message')][1]");
+    private final By leaveTypeError = By.xpath("//label[contains(text(),'Leave Type')]/following::span[contains(@class,'oxd-input-field-error-message')][1]");
+    private final By entitlementError = By.xpath("//label[contains(text(),'Entitlement')]/following::span[contains(@class,'oxd-input-field-error-message')][1]");
+
     public LeavePage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -67,7 +70,7 @@ public class LeavePage {
     private void enterEmployeeName(String employeeName) {
         WebElement nameInput = waitForElement(employeeNameInput);
         nameInput.sendKeys(employeeName);
-        actions.pause(Duration.ofSeconds(10))
+        actions.pause(Duration.ofSeconds(2)) // Shorter pause is better for real tests
                 .sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ENTER)
                 .perform();
@@ -88,28 +91,34 @@ public class LeavePage {
         clickElement(saveButton);
         clickElement(confirmButton);
     }
+
     public void clickSaveButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(saveButton)).click();
+        clickElement(saveButton);
     }
+
     public void fillLeaveEntitlementForm(String employeeName, String leaveType, String entitlement) {
         enterEmployeeName(employeeName);
         selectLeaveType();
         setEntitlementAmount(entitlement);
     }
+
     public void clickCancelButton() {
         clickElement(cancelButton);
     }
 
+    // ✅ Safe error checkers
     public boolean isEmployeeNameErrorDisplayed() {
-        return !driver.findElements(employeeNameError).isEmpty();
+        return !driver.findElements(employeeNameError).isEmpty() &&
+                driver.findElement(employeeNameError).isDisplayed();
     }
 
     public boolean isLeaveTypeErrorDisplayed() {
-        return !driver.findElements(leaveTypeError).isEmpty();
+        return !driver.findElements(leaveTypeError).isEmpty() &&
+                driver.findElement(leaveTypeError).isDisplayed();
     }
 
     public boolean isEntitlementErrorDisplayed() {
-        return !driver.findElements(entitlementError).isEmpty();
+        return !driver.findElements(entitlementError).isEmpty() &&
+                driver.findElement(entitlementError).isDisplayed();
     }
-
 }
