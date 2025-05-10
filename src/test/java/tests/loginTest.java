@@ -86,11 +86,15 @@ public class loginTest extends BaseTest {
 
         wait.until(ExpectedConditions.urlContains("dashboard"));
 
-        WebElement userDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[@class='oxd-userdropdown-name']")));
+        // Clicking the user dropdown using CSS Selector
+        WebElement userDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("p.oxd-userdropdown-name")));
         userDropdown.click();
-        WebElement logoutButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='Logout']")));
+
+        // Clicking the logout button using CSS Selector
+        WebElement logoutButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a.oxd-userdropdown-link[href*='logout']")));
         logoutButton.click();
 
+        // Waiting until the login page appears
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
 
         WebElement passwordField = driver.findElement(By.name("password"));
@@ -98,9 +102,11 @@ public class loginTest extends BaseTest {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         String passwordValue = (String) js.executeScript("return arguments[0].value;", passwordField);
 
+        // Assert that the password field is empty
         Assert.assertNotNull(passwordValue);
         Assert.assertTrue(passwordValue.isEmpty(), "Password field has autofill value after logout.");
     }
+
 
     @Test
     public void testLoginPageUsesHttps() {

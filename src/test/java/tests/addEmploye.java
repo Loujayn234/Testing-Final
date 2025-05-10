@@ -5,19 +5,14 @@ import org.testng.annotations.*;
 import pages.*;
 import static org.testng.Assert.*;
 
-public class addEmploye {
-    private WebDriver driver;
+public class addEmploye extends BaseTest {  // Extend BaseTest
+
     private loginPage loginPage;
     private PIMPage pimPage;
 
     @BeforeMethod
     public void setUp() {
-        // Initialize WebDriver
-        driver = WebDriverFactory.createDriver("chrome");
-        driver.manage().window().maximize();
-
-        // Navigate to application
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        super.setUp();
 
         // Initialize page objects
         loginPage = new loginPage(driver);
@@ -28,14 +23,8 @@ public class addEmploye {
     public void testAddEmployeeWithEmptyEmployeeId() {
         loginPage.login("Admin", "admin123");
         pimPage.enterEmployeeDetails("lhoayyy", "nabil", "fathy");
-
+        // Add your assertions or validations here if needed
     }
 
-    @AfterMethod
-    public void tearDown() {
-        // Clean up
-        if (driver != null) {
-            driver.quit();
-        }
-    }
+    // No need for tearDown, it's inherited from BaseTest
 }

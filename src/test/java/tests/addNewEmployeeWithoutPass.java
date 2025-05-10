@@ -1,21 +1,22 @@
 package tests;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.adminPage;
 import pages.loginPage;
 
-public class addNewEmployeeWithoutPass {
-    WebDriver driver;
+public class addNewEmployeeWithoutPass extends BaseTest {
+     loginPage loginPage;
+     adminPage adminPage;
 
     @BeforeMethod
     public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        super.setUp(); // Call BaseTest setup
+
+        // Initialize page objects
+        loginPage = new loginPage(driver);
+        adminPage = new adminPage(driver);
     }
 
     @Test
@@ -23,13 +24,8 @@ public class addNewEmployeeWithoutPass {
         loginPage loginPage = new loginPage(driver);
         loginPage.login("Admin", "admin123");
         adminPage adminPage = new adminPage(driver);
-        adminPage.addNewUserWithoutPass("loay ccnabillllfl", "Alice  Duval .");
+        adminPage.addNewUserWithoutPass("lojy7898", "mazen  12345");
     }
 
-    @AfterMethod
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
 }
+
