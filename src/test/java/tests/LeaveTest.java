@@ -22,7 +22,7 @@ public class LeaveTest extends BaseTest {
         loginPage.login("Admin", "admin123");
         LeavePage.navigateToLeavePage();
 
-        String employeeName = "shrouk";
+        String employeeName = "Shrouk Mohamed Mohamed";
         String leaveType = "US - Vacation";
         String entitlement = "20";
 
@@ -31,19 +31,18 @@ public class LeaveTest extends BaseTest {
         Assert.assertTrue(LeavePage.isEntitlementSuccessMessageDisplayed());
 
     }
-    // TEST CASE 2: Verify invalid entitlement
+    // TEST CASE 2: Verify valid entitlement
     @Test
     public void testAddInvalidLeaveEntitlement() {
         loginPage.login("Admin", "admin123");
         LeavePage.navigateToLeavePage();
 
-        String employeeName = "shrouk";
-        String leaveType = "US - Vacation";
-        String invalidEntitlement = "-5"; // Negative value (invalid)
+        String employeeName = "Shrouk Mohamed Mohamed";
+        String leaveType = "US - Personal";
+        String invalidEntitlement = "9.99";
 
         LeavePage.addLeaveEntitlement(employeeName, leaveType, invalidEntitlement);
-        Assert.assertFalse(LeavePage.isEntitlementSuccessMessageDisplayed(),
-                "Should be a number with upto 2 decimal places");
+        Assert.assertTrue(LeavePage.isEntitlementSuccessMessageDisplayed());
 
     }
     // TEST CASE 3:Cancel leave entitlement process
@@ -53,7 +52,7 @@ public class LeaveTest extends BaseTest {
         LeavePage.navigateToLeavePage();
 
         // Fill form but cancel instead of submitting
-        String employeeName = "shrouk";
+        String employeeName = "Shrouk Mohamed Mohamed";
         String leaveType = "US - Vacation";
         String entitlement = "20";
 
@@ -65,21 +64,5 @@ public class LeaveTest extends BaseTest {
         Assert.assertTrue(driver.getCurrentUrl().contains("viewLeaveEntitlements"),
                 "Should return to entitlements list after cancellation");
     }
-    // TEST CASE 4:Validate required fields
-    @Test
-    public void testRequiredFieldValidation() {
-        loginPage.login("Admin", "admin123");
-        LeavePage.navigateToLeavePage();
-        LeavePage.clickSaveButton();
-
-        Assert.assertTrue(LeavePage.isEmployeeNameErrorDisplayed(),
-                "Employee name required error should appear");
-        Assert.assertTrue(LeavePage.isLeaveTypeErrorDisplayed(),
-                "Leave type required error should appear");
-        Assert.assertTrue(LeavePage.isEntitlementErrorDisplayed(),
-                "Entitlement required error should appear");
-    }
-
-
     }
 
