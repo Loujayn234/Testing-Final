@@ -13,7 +13,7 @@ public class loginPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    // --- Locators ---
+    // Locators
     private By usernameInput = By.name("username");
     private By passwordInput = By.name("password");
     private By loginButton = By.cssSelector("button[type='submit']");
@@ -22,9 +22,8 @@ public class loginPage {
     public loginPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        PageFactory.initElements(driver, this);
 
-        // Optional: wait for page to load before interacting
+
         wait.until(ExpectedConditions.visibilityOfElementLocated(usernameInput));
     }
 
@@ -41,7 +40,6 @@ public class loginPage {
             WebElement errorMsgElement = shortWait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage));
             return errorMsgElement.getText();
         } catch (Exception e) {
-            System.out.println("Error message not found.");
             return null;
         }
     }

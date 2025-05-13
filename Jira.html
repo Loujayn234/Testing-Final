@@ -1,0 +1,1779 @@
+<html
+        xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<title>Jira</title>
+<style type="text/css">
+table {
+    mso-displayed-decimal-separator:"\.";
+    mso-displayed-thousand-separator:"\,";
+}
+body
+{
+    margin: 0px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color:black;
+}
+
+</style>
+<META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+<!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+<!--
+Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+since Excel does not use or save the css files it is hardcoded here.
+-->
+<style>
+@page
+{
+mso-page-orientation:landscape;
+margin:.25in .25in .5in .25in;
+mso-header-margin:.5in;
+mso-footer-margin:.25in;
+mso-footer-data:"&R&P of &N";
+mso-horizontal-page-align:center;
+mso-vertical-page-align:center;
+}
+
+td.issuekey,
+td.issuetype,
+td.status {
+    mso-style-parent: "";
+    mso-number-format: \@;
+    text-align: left;
+}
+br
+{
+    mso-data-placement:same-cell;
+}
+
+td
+{
+    vertical-align: top;
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+<x:ExcelWorksheets>
+<x:ExcelWorksheet>
+<x:Name>general_report</x:Name>
+<x:WorksheetOptions>
+<x:Print>
+<x:ValidPrinterInfo/>
+</x:Print>
+</x:WorksheetOptions>
+</x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+<body>
+
+<table border="1">
+    <tr bgcolor="#205081" height="30">
+        <td colspan="11">
+            <img src="https://depir2finalproject.atlassian.net/images/icon-jira-family-logo.png" width="57" height="30" border="0" alt="Jira">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="11">
+            <a href="https://depir2finalproject.atlassian.net/issues/?jql=%22Team%5BTeam%5D%22+%3D+7aad1ab5-823c-4ada-9797-2d7ee9c312b2%0AAND+labels+%3D+O-HRM-1%0AAND+status+IN+%28%22To+Do%22%2C+Done%2C+%22In+Development%22%2C+%22In+Progress%22%2C+%22Ready+for+Testing%22%2C+Rework%2C+Testing%29%0AORDER+BY+updated">Jira</a>
+        </td>
+    </tr>
+    <tr>
+                <td colspan="11">
+            Displaying <strong>58</strong> issues at <strong>13/May/25 7:25 AM</strong>.
+        </td>
+    </tr>
+</table>
+
+
+
+
+                                        <table id="issuetable" class="aui " border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th class="colHeaderLink headerrow-issuetype" data-id="issuetype">
+                                                        Issue Type
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                                                        Key
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-summary" data-id="summary">
+                                                        Summary
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-assignee" data-id="assignee">
+                                                        Assignee
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-reporter" data-id="reporter">
+                                                        Reporter
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-priority" data-id="priority">
+                                                        Priority
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-status" data-id="status">
+                                                        Status
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolution" data-id="resolution">
+                                                        Resolution
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-created" data-id="created">
+                                                        Created
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-updated" data-id="updated">
+                                                        Updated
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-duedate" data-id="duedate">
+                                                        Due date
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow12180" rel="12180" data-issuekey="DEPIR-304" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-304" href="https://depir2finalproject.atlassian.net/browse/DEPIR-304">DEPIR-304</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Submit With Empty Required Fields.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 02/May/25 1:48 PM </td>
+                                            <td class="updated"> 13/May/25 7:24 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11274" rel="11274" data-issuekey="DEPIR-228" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-228" href="https://depir2finalproject.atlassian.net/browse/DEPIR-228">DEPIR-228</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Check page load 
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="created"> 30/Apr/25 7:47 PM </td>
+                                            <td class="updated"> 13/May/25 6:41 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11284" rel="11284" data-issuekey="DEPIR-231" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-231" href="https://depir2finalproject.atlassian.net/browse/DEPIR-231">DEPIR-231</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave- Check when missing Employee
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="created"> 30/Apr/25 11:56 PM </td>
+                                            <td class="updated"> 13/May/25 6:40 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11296" rel="11296" data-issuekey="DEPIR-234" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-234" href="https://depir2finalproject.atlassian.net/browse/DEPIR-234">DEPIR-234</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Check without Leave period.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="created"> 01/May/25 12:47 AM </td>
+                                            <td class="updated"> 13/May/25 6:38 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow12149" rel="12149" data-issuekey="DEPIR-301" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-301" href="https://depir2finalproject.atlassian.net/browse/DEPIR-301">DEPIR-301</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Assign Leave Successfuly.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="created"> 02/May/25 1:33 PM </td>
+                                            <td class="updated"> 13/May/25 6:38 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11276" rel="11276" data-issuekey="DEPIR-229" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-229" href="https://depir2finalproject.atlassian.net/browse/DEPIR-229">DEPIR-229</a>
+</td>
+                                            <td class="summary"><p>
+                G1-leave- Check valid data entry
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="created"> 30/Apr/25 8:10 PM </td>
+                                            <td class="updated"> 13/May/25 6:37 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11288" rel="11288" data-issuekey="DEPIR-232" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-232" href="https://depir2finalproject.atlassian.net/browse/DEPIR-232">DEPIR-232</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Missing Leave Type
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="created"> 01/May/25 12:10 AM </td>
+                                            <td class="updated"> 13/May/25 6:36 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11452" rel="11452" data-issuekey="DEPIR-239" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-239" href="https://depir2finalproject.atlassian.net/browse/DEPIR-239">DEPIR-239</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave- Check negative number in Entitlement.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="created"> 01/May/25 2:12 PM </td>
+                                            <td class="updated"> 13/May/25 6:35 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow12809" rel="12809" data-issuekey="DEPIR2-286" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR2-286" href="https://depir2finalproject.atlassian.net/browse/DEPIR2-286">DEPIR2-286</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Verify search suggestion when typing Employee name.	
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="created"> 13/May/25 6:31 AM </td>
+                                            <td class="updated"> 13/May/25 6:34 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow12807" rel="12807" data-issuekey="DEPIR-343" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-343" href="https://depir2finalproject.atlassian.net/browse/DEPIR-343">DEPIR-343</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Login-Verify if the password field allows copying text.
+    </p>
+</td>
+                                            <td class="assignee">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="reporter">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 13/May/25 3:34 AM </td>
+                                            <td class="updated"> 13/May/25 3:34 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10530" rel="10530" data-issuekey="DEPIR-117" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-117" href="https://depir2finalproject.atlassian.net/browse/DEPIR-117">DEPIR-117</a>
+</td>
+                                            <td class="summary"><p>
+                G1- Employee Management - The Save Button When Adding A New User Must Be Disabled When The Input Filed Is Still Empty Or Has Errors.
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 26/Apr/25 4:27 PM </td>
+                                            <td class="updated"> 13/May/25 3:17 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10556" rel="10556" data-issuekey="DEPIR-130" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-130" href="https://depir2finalproject.atlassian.net/browse/DEPIR-130">DEPIR-130</a>
+</td>
+                                            <td class="summary"><p>
+                G1- Employee Management - Delete All Displayed Employee From Employee List
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 26/Apr/25 9:05 PM </td>
+                                            <td class="updated"> 13/May/25 3:17 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10560" rel="10560" data-issuekey="DEPIR-132" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-132" href="https://depir2finalproject.atlassian.net/browse/DEPIR-132">DEPIR-132</a>
+</td>
+                                            <td class="summary"><p>
+                G1- Employee Management - Search By Report Name In All Employee Reports
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 27/Apr/25 12:56 AM </td>
+                                            <td class="updated"> 13/May/25 3:16 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10532" rel="10532" data-issuekey="DEPIR-118" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-118" href="https://depir2finalproject.atlassian.net/browse/DEPIR-118">DEPIR-118</a>
+</td>
+                                            <td class="summary"><p>
+                G1- Employee Management - The Save Button Don&#39;t Be Disabled When The Input Filed Is Still Empty Or Has Errors.
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           High
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 26/Apr/25 4:35 PM </td>
+                                            <td class="updated"> 13/May/25 3:16 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10633" rel="10633" data-issuekey="DEPIR-159" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-159" href="https://depir2finalproject.atlassian.net/browse/DEPIR-159">DEPIR-159</a>
+</td>
+                                            <td class="summary"><p>
+                G1- Employee Management - The Site Save The Employee Without Employee ID
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Highest
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 27/Apr/25 1:25 PM </td>
+                                            <td class="updated"> 13/May/25 3:16 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10500" rel="10500" data-issuekey="DEPIR-110" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-110" href="https://depir2finalproject.atlassian.net/browse/DEPIR-110">DEPIR-110</a>
+</td>
+                                            <td class="summary"><p>
+                G1- Employee Management - Add New Employee Without Password And Confirm Password
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Highest
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 26/Apr/25 10:51 AM </td>
+                                            <td class="updated"> 13/May/25 3:15 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow12708" rel="12708" data-issuekey="DEPIR-338" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-338" href="https://depir2finalproject.atlassian.net/browse/DEPIR-338">DEPIR-338</a>
+</td>
+                                            <td class="summary"><p>
+                G1- Employee Managements - The Admin Password Didnt Change
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Highest
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/May/25 11:03 PM </td>
+                                            <td class="updated"> 13/May/25 3:15 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10506" rel="10506" data-issuekey="DEPIR-113" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-113" href="https://depir2finalproject.atlassian.net/browse/DEPIR-113">DEPIR-113</a>
+</td>
+                                            <td class="summary"><p>
+                G1- Employee Management - Delete User From User Management
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 26/Apr/25 2:02 PM </td>
+                                            <td class="updated"> 13/May/25 3:15 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10563" rel="10563" data-issuekey="DEPIR-133" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-133" href="https://depir2finalproject.atlassian.net/browse/DEPIR-133">DEPIR-133</a>
+</td>
+                                            <td class="summary"><p>
+                G1- View Employee Records - Click On Employee Record To See The Detailed Employee Profiles
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 27/Apr/25 1:10 AM </td>
+                                            <td class="updated"> 13/May/25 3:15 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10508" rel="10508" data-issuekey="DEPIR-114" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-114" href="https://depir2finalproject.atlassian.net/browse/DEPIR-114">DEPIR-114</a>
+</td>
+                                            <td class="summary"><p>
+                G1- Employee Management -Delete All Users From User Management
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 26/Apr/25 2:35 PM </td>
+                                            <td class="updated"> 13/May/25 3:14 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10504" rel="10504" data-issuekey="DEPIR-112" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-112" href="https://depir2finalproject.atlassian.net/browse/DEPIR-112">DEPIR-112</a>
+</td>
+                                            <td class="summary"><p>
+                G1- View Employee Records - Filter System Don&#39;t Filter Users By Username
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Highest
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 26/Apr/25 1:45 PM </td>
+                                            <td class="updated"> 13/May/25 3:14 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10526" rel="10526" data-issuekey="DEPIR-115" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-115" href="https://depir2finalproject.atlassian.net/browse/DEPIR-115">DEPIR-115</a>
+</td>
+                                            <td class="summary"><p>
+                G1- Employee Management - Admin Edit User Record
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 26/Apr/25 4:03 PM </td>
+                                            <td class="updated"> 13/May/25 3:14 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10528" rel="10528" data-issuekey="DEPIR-116" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-116" href="https://depir2finalproject.atlassian.net/browse/DEPIR-116">DEPIR-116</a>
+</td>
+                                            <td class="summary"><p>
+                G1- View Employee Records - Check The Reset Button Its Return All User Records
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 26/Apr/25 4:14 PM </td>
+                                            <td class="updated"> 13/May/25 3:13 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10502" rel="10502" data-issuekey="DEPIR-111" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-111" href="https://depir2finalproject.atlassian.net/browse/DEPIR-111">DEPIR-111</a>
+</td>
+                                            <td class="summary"><p>
+                G1- View Employee Records - Filter System Users By Username
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 26/Apr/25 1:41 PM </td>
+                                            <td class="updated"> 13/May/25 3:13 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10631" rel="10631" data-issuekey="DEPIR-158" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-158" href="https://depir2finalproject.atlassian.net/browse/DEPIR-158">DEPIR-158</a>
+</td>
+                                            <td class="summary"><p>
+                G1- Employee Management -Do Not Add Employee Without ID
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 27/Apr/25 1:17 PM </td>
+                                            <td class="updated"> 13/May/25 3:13 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10498" rel="10498" data-issuekey="DEPIR-109" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-109" href="https://depir2finalproject.atlassian.net/browse/DEPIR-109">DEPIR-109</a>
+</td>
+                                            <td class="summary"><p>
+                G1- Employee Managements - A New Employee Should Not Be Added Without A Password And Confirm Password
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 26/Apr/25 10:31 AM </td>
+                                            <td class="updated"> 13/May/25 3:13 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10534" rel="10534" data-issuekey="DEPIR-119" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-119" href="https://depir2finalproject.atlassian.net/browse/DEPIR-119">DEPIR-119</a>
+</td>
+                                            <td class="summary"><p>
+                G1- Employee Management - Add New Employee
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 26/Apr/25 5:04 PM </td>
+                                            <td class="updated"> 13/May/25 3:12 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow12706" rel="12706" data-issuekey="DEPIR-337" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-337" href="https://depir2finalproject.atlassian.net/browse/DEPIR-337">DEPIR-337</a>
+</td>
+                                            <td class="summary"><p>
+                G1- Employee Managements - Change the password of Admin account
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/May/25 10:12 PM </td>
+                                            <td class="updated"> 13/May/25 3:12 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10494" rel="10494" data-issuekey="DEPIR-107" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-107" href="https://depir2finalproject.atlassian.net/browse/DEPIR-107">DEPIR-107</a>
+</td>
+                                            <td class="summary"><p>
+                G1- View Employee Records - Add New Employee
+    </p>
+</td>
+                                            <td class="assignee">            Loay nabil fathy
+    </td>
+                                            <td class="reporter">            Loay nabil fathy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 26/Apr/25 10:17 AM </td>
+                                            <td class="updated"> 13/May/25 3:12 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow12710" rel="12710" data-issuekey="DEPIR-339" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-339" href="https://depir2finalproject.atlassian.net/browse/DEPIR-339">DEPIR-339</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Login-Check account lockout after 5 failed attempts.
+    </p>
+</td>
+                                            <td class="assignee">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="reporter">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 11/May/25 2:35 AM </td>
+                                            <td class="updated"> 13/May/25 3:11 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow12739" rel="12739" data-issuekey="DEPIR-340" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-340" href="https://depir2finalproject.atlassian.net/browse/DEPIR-340">DEPIR-340</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Login-Verify that the URL starts with https
+    </p>
+</td>
+                                            <td class="assignee">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="reporter">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 12/May/25 9:55 PM </td>
+                                            <td class="updated"> 13/May/25 3:10 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11623" rel="11623" data-issuekey="DEPIR-254" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-254" href="https://depir2finalproject.atlassian.net/browse/DEPIR-254">DEPIR-254</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave- Verify default Leave Period is correct.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 01/May/25 5:03 PM </td>
+                                            <td class="updated"> 13/May/25 3:10 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11282" rel="11282" data-issuekey="DEPIR-230" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-230" href="https://depir2finalproject.atlassian.net/browse/DEPIR-230">DEPIR-230</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Check All fields empty
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 30/Apr/25 10:46 PM </td>
+                                            <td class="updated"> 13/May/25 3:10 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11386" rel="11386" data-issuekey="DEPIR-237" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-237" href="https://depir2finalproject.atlassian.net/browse/DEPIR-237">DEPIR-237</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Entitlement non-numeric input.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 01/May/25 1:40 PM </td>
+                                            <td class="updated"> 13/May/25 3:10 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11621" rel="11621" data-issuekey="DEPIR-253" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-253" href="https://depir2finalproject.atlassian.net/browse/DEPIR-253">DEPIR-253</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Verify dropdown functionality for Leave Type.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 01/May/25 4:54 PM </td>
+                                            <td class="updated"> 13/May/25 3:09 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11617" rel="11617" data-issuekey="DEPIR-251" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-251" href="https://depir2finalproject.atlassian.net/browse/DEPIR-251">DEPIR-251</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Verify page loads correctly.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 01/May/25 4:42 PM </td>
+                                            <td class="updated"> 13/May/25 3:09 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11584" rel="11584" data-issuekey="DEPIR-250" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-250" href="https://depir2finalproject.atlassian.net/browse/DEPIR-250">DEPIR-250</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Search button inactive with no data.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 01/May/25 4:22 PM </td>
+                                            <td class="updated"> 13/May/25 3:09 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11814" rel="11814" data-issuekey="DEPIR-265" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-265" href="https://depir2finalproject.atlassian.net/browse/DEPIR-265">DEPIR-265</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Check Leave Period.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 01/May/25 10:47 PM </td>
+                                            <td class="updated"> 13/May/25 3:08 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11551" rel="11551" data-issuekey="DEPIR-249" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-249" href="https://depir2finalproject.atlassian.net/browse/DEPIR-249">DEPIR-249</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Autocomplete Employee Field.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 01/May/25 4:09 PM </td>
+                                            <td class="updated"> 13/May/25 3:08 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11790" rel="11790" data-issuekey="DEPIR-259" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-259" href="https://depir2finalproject.atlassian.net/browse/DEPIR-259">DEPIR-259</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Generate Report for a Specific Leave Type.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 01/May/25 9:34 PM </td>
+                                            <td class="updated"> 13/May/25 3:08 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11683" rel="11683" data-issuekey="DEPIR-257" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-257" href="https://depir2finalproject.atlassian.net/browse/DEPIR-257">DEPIR-257</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Check search with valid inputs.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 01/May/25 5:53 PM </td>
+                                            <td class="updated"> 13/May/25 3:08 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11806" rel="11806" data-issuekey="DEPIR-262" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-262" href="https://depir2finalproject.atlassian.net/browse/DEPIR-262">DEPIR-262</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-.Generate Report For Specific Employee.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 01/May/25 10:26 PM </td>
+                                            <td class="updated"> 13/May/25 3:07 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11826" rel="11826" data-issuekey="DEPIR-266" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-266" href="https://depir2finalproject.atlassian.net/browse/DEPIR-266">DEPIR-266</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Verify user can select Leave Period.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 01/May/25 11:01 PM </td>
+                                            <td class="updated"> 13/May/25 3:07 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11906" rel="11906" data-issuekey="DEPIR-286" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-286" href="https://depir2finalproject.atlassian.net/browse/DEPIR-286">DEPIR-286</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Reversed date range.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 02/May/25 2:12 AM </td>
+                                            <td class="updated"> 13/May/25 3:07 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11902" rel="11902" data-issuekey="DEPIR-284" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-284" href="https://depir2finalproject.atlassian.net/browse/DEPIR-284">DEPIR-284</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Valid date range search.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 02/May/25 2:01 AM </td>
+                                            <td class="updated"> 13/May/25 3:06 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11716" rel="11716" data-issuekey="DEPIR-258" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-258" href="https://depir2finalproject.atlassian.net/browse/DEPIR-258">DEPIR-258</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Verify responsiveness of the page.
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 01/May/25 6:29 PM </td>
+                                            <td class="updated"> 13/May/25 3:06 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow12772" rel="12772" data-issuekey="DEPIR-341" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-341" href="https://depir2finalproject.atlassian.net/browse/DEPIR-341">DEPIR-341</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Login- Verify Password Field Does Not Autofill After Logout.
+    </p>
+</td>
+                                            <td class="assignee">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="reporter">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 13/May/25 12:11 AM </td>
+                                            <td class="updated"> 13/May/25 3:06 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow12805" rel="12805" data-issuekey="DEPIR-342" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-342" href="https://depir2finalproject.atlassian.net/browse/DEPIR-342">DEPIR-342</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Login-Verify that Caps Lock warning is displayed when typing password with Caps Lock on.
+    </p>
+</td>
+                                            <td class="assignee">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="reporter">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 13/May/25 1:24 AM </td>
+                                            <td class="updated"> 13/May/25 3:06 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11306" rel="11306" data-issuekey="DEPIR-235" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-235" href="https://depir2finalproject.atlassian.net/browse/DEPIR-235">DEPIR-235</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Leave-Check Invalid Employee Name
+    </p>
+</td>
+                                            <td class="assignee">            Shrouk elgizawy
+    </td>
+                                            <td class="reporter">            Shrouk elgizawy
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 01/May/25 1:30 AM </td>
+                                            <td class="updated"> 13/May/25 3:05 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow12320" rel="12320" data-issuekey="DEPIR-317" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-317" href="https://depir2finalproject.atlassian.net/browse/DEPIR-317">DEPIR-317</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Login-CapsLock warning is not displayed when typing password on login page
+    </p>
+</td>
+                                            <td class="assignee">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="reporter">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 04/May/25 3:21 AM </td>
+                                            <td class="updated"> 13/May/25 3:05 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow12316" rel="12316" data-issuekey="DEPIR-316" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-316" href="https://depir2finalproject.atlassian.net/browse/DEPIR-316">DEPIR-316</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Login-Check if Caps Lock warning appears when typing the password.
+    </p>
+</td>
+                                            <td class="assignee">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="reporter">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 04/May/25 3:13 AM </td>
+                                            <td class="updated"> 13/May/25 3:05 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow12322" rel="12322" data-issuekey="DEPIR-318" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-318" href="https://depir2finalproject.atlassian.net/browse/DEPIR-318">DEPIR-318</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Login-Verify UI alignment and responsiveness on mobile screen.
+    </p>
+</td>
+                                            <td class="assignee">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="reporter">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 04/May/25 3:37 AM </td>
+                                            <td class="updated"> 13/May/25 3:04 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow12324" rel="12324" data-issuekey="DEPIR-319" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-319" href="https://depir2finalproject.atlassian.net/browse/DEPIR-319">DEPIR-319</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Login-Verify that the login system is protected against SQL injections.
+    </p>
+</td>
+                                            <td class="assignee">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="reporter">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 04/May/25 3:56 AM </td>
+                                            <td class="updated"> 13/May/25 3:04 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow12314" rel="12314" data-issuekey="DEPIR-315" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-315" href="https://depir2finalproject.atlassian.net/browse/DEPIR-315">DEPIR-315</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Login-Check if the password is masked (shown as dots/asterisks).
+    </p>
+</td>
+                                            <td class="assignee">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="reporter">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 04/May/25 3:04 AM </td>
+                                            <td class="updated"> 13/May/25 3:04 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow12312" rel="12312" data-issuekey="DEPIR-314" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-314" href="https://depir2finalproject.atlassian.net/browse/DEPIR-314">DEPIR-314</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Login with empty fields (both username and password).
+    </p>
+</td>
+                                            <td class="assignee">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="reporter">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 04/May/25 3:00 AM </td>
+                                            <td class="updated"> 13/May/25 3:04 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow12310" rel="12310" data-issuekey="DEPIR-313" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-313" href="https://depir2finalproject.atlassian.net/browse/DEPIR-313">DEPIR-313</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Login with correct username and wrong password.
+    </p>
+</td>
+                                            <td class="assignee">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="reporter">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 04/May/25 2:54 AM </td>
+                                            <td class="updated"> 13/May/25 3:03 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11619" rel="11619" data-issuekey="DEPIR-252" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-252" href="https://depir2finalproject.atlassian.net/browse/DEPIR-252">DEPIR-252</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Login-Checking with wrong username and correct password.
+    </p>
+</td>
+                                            <td class="assignee">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="reporter">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 01/May/25 4:48 PM </td>
+                                            <td class="updated"> 13/May/25 3:03 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow11518" rel="11518" data-issuekey="DEPIR-248" class="issuerow">
+                                            <td class="issuetype">    Test Case
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DEPIR-248" href="https://depir2finalproject.atlassian.net/browse/DEPIR-248">DEPIR-248</a>
+</td>
+                                            <td class="summary"><p>
+                G1-Login-Checking with valid username &amp; password
+    </p>
+</td>
+                                            <td class="assignee">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="reporter">            Loujayn Bashir Mahmoud
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 01/May/25 3:54 PM </td>
+                                            <td class="updated"> 13/May/25 3:02 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+        </tbody>
+    </table>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#dddddd" colspan="11"><font size="1">
+        Generated at Tue May 13 04:25:45 UTC 2025 by Loujayn Bashir Mahmoud using Jira 1001.0.0-SNAPSHOT#100283-rev:ae90960f6ce4b93d8be8d846e57df479663fa457.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>

@@ -18,14 +18,12 @@ public class BaseTest {
     public void setUp() {
         // Set Chrome options (optional)
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
-        options.addArguments("--remote-allow-origins=*"); // Optional fix for remote issues
 
         // Initialize WebDriver
         driver = new ChromeDriver(options);
 
         // Initialize WebDriverWait
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
         // Go to your application login page
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
