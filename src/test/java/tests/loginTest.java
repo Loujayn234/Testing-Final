@@ -79,18 +79,17 @@ public class loginTest extends BaseTest {
 
         wait.until(ExpectedConditions.urlContains("dashboard"));
 
-        // Clicking the user dropdown using CSS Selector
+
         WebElement userDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("p.oxd-userdropdown-name")));
         userDropdown.click();
 
-        // Clicking the logout button using CSS Selector
         WebElement logoutButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a.oxd-userdropdown-link[href*='logout']")));
         logoutButton.click();
 
-        // Waiting until the login page appears
+
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
 
-        // Wait for 3 seconds
+
         Thread.sleep(3000);
 
         WebElement passwordField = driver.findElement(By.name("password"));
